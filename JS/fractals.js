@@ -137,7 +137,6 @@ for(let input in EInputs)
         EInputs[input].onchange = function()
         {
             if(Number(EInputs[input].value) > Number(EInputs[input].max)) EInputs[input].value = EInputs[input].max;
-             
             if(Number(EInputs[input].value) < Number(EInputs[input].min)) EInputs[input].value = EInputs[input].min;
         }
     }
@@ -166,4 +165,12 @@ function DrawTree(x1, y1, angle, level)
         DrawTree(x2, y2, angle + Number(EInputs.angle.value), level - 1);
     }
 }
-DrawTree(0, 0, -90, Number(EInputs.level.value)); SetViewBox();
+
+window.onload = function() 
+{
+    //костыльная инициализация первого фрактала
+    DrawTree(0, 0, -90, Number(EInputs.level.value));
+    SetViewBox();
+    RENDER_WIN.clear();
+    DrawTree(0, 0, -90, Number(EInputs.level.value));
+};
