@@ -171,7 +171,6 @@ for(let input in EInputs)
         EInputs[input].onchange = function()
         {
             if(Number(EInputs[input].value) > Number(EInputs[input].max)) EInputs[input].value = EInputs[input].max;
-             
             if(Number(EInputs[input].value) < Number(EInputs[input].min)) EInputs[input].value = EInputs[input].min;
         }
     }
