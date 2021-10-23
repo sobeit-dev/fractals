@@ -29,12 +29,21 @@
             width: 80vw;
             height: 99vh;
             overflow: hidden;
-            cursor: not-allowed;
+            cursor: pointer;
             background-color: rgb(219, 211, 211);
             border: rgb(58, 58, 58) 5px solid;
         }
 
         div#main-render-win > svg  
+        {
+            transform-origin: 0px 0px;
+            transform: scale(1) translate(0px, 0px);
+            cursor: crosshair;
+            background-color: rgb(255, 255, 255);
+            border: red 1px solid;
+        }
+
+        div#main-render-win > canvas  
         {
             transform-origin: 0px 0px;
             transform: scale(1) translate(0px, 0px);
@@ -162,8 +171,8 @@
     </div>
 </body>
 
-<script type="text/javascript" src="JS/libs/SVG.js"></script>
-<script type="text/javascript" src="JS/main.js"    ></script>
-<script type="text/javascript" src="JS/fractals.js"></script>
+<script type="text/javascript" src="JS/libs/SVG.js" defer></script>
+<script type="text/javascript" src="JS/main.js"     defer></script>
+<script type="text/javascript" src="JS/fractals.js" defer></script>
 
 </html>
